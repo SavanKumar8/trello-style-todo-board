@@ -1,12 +1,12 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
 import "./App.css";
+import TodoBoard from "./components/to-do-board/todoBoard";
 
 function App() {
-  const [count, setCount] = useState(0);
-
-  return <>Trello app</>;
+  return (
+    <>
+      <TodoBoard />
+    </>
+  );
 }
 
 export default App;
