@@ -57,3 +57,9 @@
   cursor: pointer;
   transition: transform 0.2s ease-in-out;
 }
+
+@media only screen and (max-width: 768px) {
+  .lane {
+    width: 100%;
+  }
+}
