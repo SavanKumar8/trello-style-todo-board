@@ -25,7 +25,13 @@
   transition: all 0.3s ease-in-out;
 }
 
-/* Animations */
+@media only screen and (max-width: 600px) {
+  .modal-content {
+    max-width: 220px;
+    min-width: 0px;
+  }
+}
+
 @keyframes fadeIn {
   from {
     background-color: rgba(0, 0, 0, 0);
