@@ -12,7 +12,7 @@ import {
 } from "../../constant/constant";
 import Button from "../common/button/button";
 import PlusIcon from "../../assets/plus_icon.svg";
-import CreateTodoModal from "../create-do-do/createTodoModal";
+import CreateTodoModal from "../to-do-do/todoModal";
 export default function TodoBoard() {
   const { todos, loading, error } = useSelector((state) => state.todos);
   const dispatch = useDispatch();
@@ -25,6 +25,7 @@ export default function TodoBoard() {
   if (loading !== API_STATES.SUCCESS) {
     return <Loader />;
   }
+  ``;
   const openModal = () => setIsModalOpen(true);
   const closeModal = () => setIsModalOpen(false);
   const handleCreateTodo = (title, description) => {

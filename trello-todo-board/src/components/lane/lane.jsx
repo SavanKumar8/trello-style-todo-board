@@ -9,7 +9,7 @@ import {
 } from "../../features/todoSlice";
 import editIcon from "../../assets/edit_icon.png";
 import deleteIcon from "../../assets/delete_icon.png";
-import CreateTodoModal from "../create-do-do/createTodoModal";
+import TodoModal from "../to-do-do/todoModal";
 
 export default function Lane({ status, todos }) {
   const dispatch = useDispatch();
@@ -88,7 +88,7 @@ export default function Lane({ status, todos }) {
           </div>
         ))}
         {editClick && (
-          <CreateTodoModal
+          <TodoModal
             onClose={closeModal}
             modalHeading={"Update your Todo"}
             buttonLabel={"Update"}
@@ -98,7 +98,7 @@ export default function Lane({ status, todos }) {
           />
         )}
         {deleteClick && (
-          <CreateTodoModal
+          <TodoModal
             onClose={closeModal}
             modalHeading={
               "Do you really want to delete this Todo? This action cannot be undone."

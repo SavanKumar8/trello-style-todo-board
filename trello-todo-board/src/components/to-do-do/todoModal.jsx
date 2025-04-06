@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
-import "./createTodoModal.css";
+import "./todoModal.css";
 
-export default function CreateTodoModal({
+export default function TodoModal({
   onClose,
   onCreate,
   isEdit = false,
