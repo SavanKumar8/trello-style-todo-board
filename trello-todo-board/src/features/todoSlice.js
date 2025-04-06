@@ -2,15 +2,7 @@ import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import { API_STATES, STATUS } from "../constant/constant";
 
 const initialState = {
-  todos: [
-    {
-      id: 1,
-      todo: "",
-      completed: true,
-      userId: 26,
-      status: STATUS.PENDING,
-    },
-  ],
+  todos: [],
   loading: "idle",
   error: null,
 };
