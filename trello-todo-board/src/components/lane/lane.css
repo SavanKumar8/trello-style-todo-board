@@ -60,6 +60,6 @@
 
 @media only screen and (max-width: 768px) {
   .lane {
-    width: 100%;
+    width: -webkit-fill-available;
   }
 }
