@@ -3,7 +3,7 @@ A clean, responsive, and interactive Trello-style Todo Board built with React, R
 
 🔗 Live Demo: https://sensational-druid-94eca0.netlify.app/
 🌐 Hosted using: Netlify (Free tier)
-[App Preview desktop](./preview/desktop.png)
+[!App Preview] (./preview/desktop.png)
 
 
 Setup Instructions
