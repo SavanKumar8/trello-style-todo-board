@@ -8,3 +8,32 @@
   box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.08);
   transition: all 0.3s ease-in-out;
 }
+.custom-button {
+  display: flex;
+  justify-content: flex-start;
+  padding: 20px;
+}
+
+.create-button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  background-color: #527bcf;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.create-button:hover {
+  background-color: #4063b0;
+}
+
+@media only screen and (max-width: 600px) {
+  .board {
+    display: block;
+  }
+}

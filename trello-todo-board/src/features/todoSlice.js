@@ -8,7 +8,7 @@ const initialState = {
       todo: "",
       completed: true,
       userId: 26,
-      status: STATUS.PENDING, // this is my status  custom key, because API is only returning me the true or false
+      status: STATUS.PENDING,
     },
   ],
   loading: "idle",
@@ -46,6 +46,23 @@ const todoSlice = createSlice({
         todo.status = newStatus;
       }
     },
+    updateTodo: (state, action) => {
+      const { id, title, description } = action.payload;
+      const existingTodo = state.todos.find((todo) => todo.id === id);
+      if (existingTodo) {
+        existingTodo.todo = title;
+        if (description !== undefined) {
+          existingTodo.description = description;
+        }
+      }
+    },
+    deleteTodo: (state, action) => {
+      const id = action.payload;
+      state.todos = state.todos.filter((todo) => todo.id !== id);
+    },
+    addTodo: (state, action) => {
+      state.todos.push(action.payload);
+    },
   },
   extraReducers: (builder) => {
     builder.addCase(fetchToDos.pending, (state) => {
@@ -60,5 +77,6 @@ const todoSlice = createSlice({
     });
   },
 });
-export const { updateTodoStatus } = todoSlice.actions;
+export const { updateTodoStatus, addTodo, updateTodo, deleteTodo } =
+  todoSlice.actions;
 export default todoSlice.reducer;
